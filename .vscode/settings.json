@@ -1,0 +1,18 @@
+{
+    "files.associations": {
+        "gpio.h": "c",
+        "queue.h": "c",
+        "task.h": "c",
+        "*.inc": "c",
+        "stdio.h": "c",
+        "hw_def.h": "c",
+        "def.h": "c",
+        "bsp.h": "c",
+        "stdlib.h": "c",
+        "stdbool.h": "c",
+        "sdkconfig.h": "c",
+        "stdarg.h": "c",
+        "string.h": "c"
+    },
+    "C_Cpp.dimInactiveRegions": true,
+}
