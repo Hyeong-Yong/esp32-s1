@@ -7,6 +7,7 @@
 
 
 #include "led.h"
+#include "cli.h"
 
 #ifdef _USE_HW_LED
 #include "driver/gpio.h"
@@ -28,7 +29,9 @@ static led_tbl_t led_tbl[LED_MAX_CH] =
 };
 
 
-
+#ifdef _USE_HW_CLI
+static void cliLED(cli_args_t *args);
+#endif
 
 bool ledInit(void)
 {
@@ -38,6 +41,10 @@ bool ledInit(void)
     gpio_set_direction(led_tbl[i].pin, GPIO_MODE_OUTPUT);
     ledOff(i);
   }
+
+#ifdef _USE_HW_CLI
+  cliAdd("led", cliLED);
+#endif
 
   return true;
 }
@@ -65,5 +72,44 @@ void ledToggle(uint8_t ch)
   led_tbl[ch].data = !led_tbl[ch].data;
   gpio_set_level(led_tbl[ch].pin, led_tbl[ch].data);
 }
+
+
+void cliLED(cli_args_t *args)
+{
+  bool ret = false;
+
+  if (args->argc == 3 && args->isStr(0, "toggle") == true)
+    {
+      uint8_t led_ch;
+      uint32_t toggle_time;
+      uint32_t pre_time;
+
+      led_ch = (uint8_t)args->getData(1);
+      toggle_time = (uint32_t)args->getData(2);
+
+      if (led_ch >0)
+        {
+          led_ch--;
+        }
+      pre_time=millis();
+      while (cliKeepLoop())
+        {
+          if (millis()-pre_time >= toggle_time)
+            {
+              pre_time = millis();
+              ledToggle(led_ch);
+            }
+            delay(10);
+        }
+      ret=true;
+    }
+
+  if (ret != true)
+    {
+      cliPrintf("led toggle ch[1~%d] time_ms\n", LED_MAX_CH);
+    }
+}
+
+
 
 #endif

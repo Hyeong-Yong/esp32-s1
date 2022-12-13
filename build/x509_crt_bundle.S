@@ -1,4 +1,4 @@
-/* * Data converted from G:/esp32/GPIO_esp32_v1/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from C:/ST/esp32/esp32-s1/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 .section .rodata.embedded

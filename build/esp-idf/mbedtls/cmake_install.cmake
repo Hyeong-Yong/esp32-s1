@@ -39,6 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("G:/esp32/GPIO_esp32_v1/build/esp-idf/mbedtls/mbedtls/cmake_install.cmake")
+  include("C:/ST/esp32/esp32-s1/build/esp-idf/mbedtls/mbedtls/cmake_install.cmake")
 endif()
 

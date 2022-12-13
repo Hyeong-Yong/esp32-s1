@@ -5,18 +5,18 @@ cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
   "C:/Espressif/frameworks/esp-idf-v5.0/components/bootloader/subproject"
-  "G:/esp32/GPIO_esp32_v1/build/bootloader"
-  "G:/esp32/GPIO_esp32_v1/build/bootloader-prefix"
-  "G:/esp32/GPIO_esp32_v1/build/bootloader-prefix/tmp"
-  "G:/esp32/GPIO_esp32_v1/build/bootloader-prefix/src/bootloader-stamp"
-  "G:/esp32/GPIO_esp32_v1/build/bootloader-prefix/src"
-  "G:/esp32/GPIO_esp32_v1/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/ST/esp32/esp32-s1/build/bootloader"
+  "C:/ST/esp32/esp32-s1/build/bootloader-prefix"
+  "C:/ST/esp32/esp32-s1/build/bootloader-prefix/tmp"
+  "C:/ST/esp32/esp32-s1/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/ST/esp32/esp32-s1/build/bootloader-prefix/src"
+  "C:/ST/esp32/esp32-s1/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "G:/esp32/GPIO_esp32_v1/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "C:/ST/esp32/esp32-s1/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "G:/esp32/GPIO_esp32_v1/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "C:/ST/esp32/esp32-s1/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()

@@ -5,6 +5,9 @@
 void hwInit(void)
 {
     ledInit();
+    uartInit();
+    cliInit();
+    gpioInit();
     
 }
 

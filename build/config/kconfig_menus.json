@@ -3349,6 +3349,16 @@
         "children": [],
         "depends_on": null,
         "help": null,
+        "id": "ESP_ROM_SUPPORT_MULTIPLE_UART",
+        "name": "ESP_ROM_SUPPORT_MULTIPLE_UART",
+        "range": null,
+        "title": null,
+        "type": "bool"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
         "id": "ESP_ROM_NEEDS_SWSETUP_WORKAROUND",
         "name": "ESP_ROM_NEEDS_SWSETUP_WORKAROUND",
         "range": null,
@@ -9560,16 +9570,6 @@
                         "range": null,
                         "title": "Divider for IV Update state refresh timer",
                         "type": "int"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": "BLE_MESH",
-                        "help": "According to Section 3.10.5 of Mesh Specification v1.0.1.\nIf a node in Normal Operation receives a Secure Network beacon with an IV index\nequal to the last known IV index+1 and the IV Update Flag set to 0, the node may\nupdate its IV without going to the IV Update in Progress state, or it may initiate\nan IV Index Recovery procedure (Section 3.10.6), or it may ignore the Secure\nNetwork beacon. The node makes the choice depending on the time since last IV\nupdate and the likelihood that the node has missed the Secure Network beacons\nwith the IV update Flag.\nWhen the above situation is encountered, this option can be used to decide whether\nto perform the IV index recovery procedure.",
-                        "id": "BLE_MESH_IVU_RECOVERY_IVI",
-                        "name": "BLE_MESH_IVU_RECOVERY_IVI",
-                        "range": null,
-                        "title": "Recovery the IV index when the latest whole IV update procedure is missed",
-                        "type": "bool"
                     },
                     {
                         "children": [],

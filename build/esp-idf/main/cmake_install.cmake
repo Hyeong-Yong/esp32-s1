@@ -1,4 +1,4 @@
-# Install script for directory: G:/esp32/GPIO_esp32_v1/main
+# Install script for directory: C:/ST/esp32/esp32-s1/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

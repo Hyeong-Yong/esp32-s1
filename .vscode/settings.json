@@ -12,7 +12,19 @@
         "stdbool.h": "c",
         "sdkconfig.h": "c",
         "stdarg.h": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "uart.h": "c",
+        "clk_tree_defs.h": "c",
+        "rtc_periph.h": "c",
+        "esp_assert.h": "c",
+        "soc_caps.h": "c",
+        "assert.h": "c",
+        "_ansi.h": "c",
+        "newlib.h": "c",
+        "freertos.h": "c",
+        "led.h": "c",
+        "esp_timer.h": "c",
+        "cli.h": "c"
     },
     "C_Cpp.dimInactiveRegions": true,
 }

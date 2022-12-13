@@ -3349,6 +3349,16 @@
         "children": [],
         "depends_on": null,
         "help": null,
+        "id": "ESP_ROM_SUPPORT_MULTIPLE_UART",
+        "name": "ESP_ROM_SUPPORT_MULTIPLE_UART",
+        "range": null,
+        "title": null,
+        "type": "bool"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
         "id": "ESP_ROM_NEEDS_SWSETUP_WORKAROUND",
         "name": "ESP_ROM_NEEDS_SWSETUP_WORKAROUND",
         "range": null,
